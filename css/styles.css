@@ -1,0 +1,295 @@
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(115, 39, 167);
+  font-family: "Oswald", sans-serif;
+  display: grid;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  padding: 20px 0;
+  grid-template-columns: 2fr repeat(5, 1fr);
+}
+
+.imagen-logo {
+  display: grid;
+  justify-items: center;
+}
+
+
+
+.lista-navegacion > a {
+  border-right: 1px solid black;
+}
+
+li {
+  display: grid;
+  justify-items: center;
+  padding: 10px 0;
+  color: white;
+}
+
+li:hover {
+  font-weight: bold;
+}
+
+
+@media (max-width:600px) {
+    ul {
+        padding: 20px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+      }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  font-family: "Oswald", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0 5%;
+  background: rgb(115, 39, 167);
+}
+
+.imagen-logo {
+  padding: 20px 0;
+}
+
+ul {
+  list-style: none;
+  margin: 30px 0;
+}
+
+ul li {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 30px;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+}
+
+ul li a:hover {
+  font-weight: bold;
+}
+
+label {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+#icon {
+  background-color: rgb(115, 39, 167);
+  padding: 5px 7px 3px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+#icon svg {
+  color: #fff;
+  height: 28px;
+  transition: all 0.3s ease;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+svg {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin-top: 30%;
+}
+
+path {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#checkbox,
+#icon {
+  display: none;
+}
+
+footer {
+  background: #ddd;
+  margin-top: 10em;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+}
+
+.autor {
+  justify-content: left;
+  font-size: 15px;
+  padding: 30px;
+}
+
+.svg-inline--fa {
+  vertical-align: -0.2em;
+}
+
+.rounded-social-buttons {
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover,
+.rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter,
+.fa-facebook-f,
+.fa-linkedin,
+.fa-youtube,
+.fa-instagram {
+  font-size: 25px;
+}
+
+.rounded-social-buttons .social-button.facebook {
+  background: #3b5998;
+}
+
+.rounded-social-buttons .social-button.facebook:hover,
+.rounded-social-buttons .social-button.facebook:focus {
+  color: #3b5998;
+  background: #fefefe;
+  border-color: #3b5998;
+}
+
+.rounded-social-buttons .social-button.twitter {
+  background: #55acee;
+}
+
+.rounded-social-buttons .social-button.twitter:hover,
+.rounded-social-buttons .social-button.twitter:focus {
+  color: #55acee;
+  background: #fefefe;
+  border-color: #55acee;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover,
+.rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.youtube {
+  background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover,
+.rounded-social-buttons .social-button.youtube:focus {
+  color: #bb0000;
+  background: #fefefe;
+  border-color: #bb0000;
+}
+
+.rounded-social-buttons .social-button.instagram {
+  background: #125688;
+}
+
+.rounded-social-buttons .social-button.instagram:hover,
+.rounded-social-buttons .social-button.instagram:focus {
+  color: #125688;
+  background: #fefefe;
+  border-color: #125688;
+}
+
+@media screen and (max-width: 900px) {
+  .imagen-logo {
+    width: 50vw;
+  }
+
+  nav {
+    border-bottom: 1px solid #455468;
+    grid-template-columns: 4fr 1fr;
+  }
+
+  ul {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 71px);
+    background-color: rgb(115, 39, 167);
+    left: 0;
+    top: 0;
+    text-align: center;
+    display: none;
+    margin-top: 71px;
+  }
+
+  ul li {
+    display: block;
+    padding: 10px 15px;
+  }
+
+  ul li a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  #icon {
+    display: block;
+    /*         margin-left: 50%;
+        margin-top: 2em;
+ */
+  }
+
+  #checkbox:checked ~ ul {
+    display: block;
+  }
+}
