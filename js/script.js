@@ -142,3 +142,5 @@ const arregloProductos = [
   articulo15,
   articulo16,
 ];
+
+module.exports = arregloProductos;
