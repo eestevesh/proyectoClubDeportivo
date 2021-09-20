@@ -1,71 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Defensor Sporting Club | Sitio oficial - Toda la información del club.
+    </title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Defensor Sporting Club | Sitio oficial - Toda la información del club.</title>
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/stylesCopy.css" rel="stylesheet" />
+    <link href="css/dropzone.css" rel="stylesheet" />
+  </head>
 
-</head>
-<script>
-  alert("Esta página será completada en futuras entregas");
-</script>
-<body>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="index.html">
+            <img
+              src="https://defensorsporting.com.uy/wp-content/uploads/2019/07/dsc-logo.png"
+              alt="Defensor Sporting Club | Sitio oficial"
+              class="imagen-logo"
+          /></a>
+        </div>
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox" id="icon">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </label>
+        <ul>
+          <li>
+            <a href="nuestroClub.html" class="enlaces-navbar">Nuestro club</a>
+          </li>
+          <li>
+            <a href="primerEquipo.html" class="enlaces-navbar">Primer equipo</a>
+          </li>
+          <li><a href="tienda.html" class="enlaces-navbar">Tienda</a></li>
+          <li>
+            <a href="haceteSocio.html" class="enlaces-navbar">Hacete socio</a>
+          </li>
+          <li><a href="consultas.html" class="enlaces-navbar">Consultas</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <nav>
-      <div>
-        <a href="index.html">
-          <img src="https://defensorsporting.com.uy/wp-content/uploads/2019/07/dsc-logo.png"
-            alt="Defensor Sporting Club | Sitio oficial" class="imagen-logo" /></a>
+    <div class="container">
+      <div class="text-center p-4">
+        <h2 class="formato">Hacete socio</h2>
+        <p>
+          Estás a un paso de unirte a la comunidad de Defensor Sporting. <br />
+          Ingresá los siguientes datos y registrate para ser ingresado en el
+          sistema. <br />
+          Vas a ser contactado para proceder con la cuota.
+        </p>
       </div>
-      <input type="checkbox" id="checkbox">
-      <label for="checkbox" id="icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </label>
-      <ul>
-        <li><a href="nuestroClub.html" class="enlaces-navbar">Nuestro club</a></li>
-        <li><a href="primerEquipo.html" class="enlaces-navbar">Primer equipo</a></li>
-        <li><a href="tienda.html" class="enlaces-navbar">Tienda</a></li>
-        <li><a href="haceteSocio.html" class="enlaces-navbar">Hacete socio</a></li>
-        <li><a href="consultas.html" class="enlaces-navbar">Consultas</a></li>
-      </ul>
-    </nav>
-  </header>
+      <form method="POST" action="/haceteSocio">
+        <div class="row container d-flex justify-content-center">
+          <div class="col-xl-8 col-md-12 bg-light" id="padreFormulario">
+            <div class="card user-card-full">
+              <div class="row m-l-0 m-r-0" id="formulario">
+                <div class="col-sm-4 bg-c-lite-green user-profile">
+                  <div class="card-block text-center text-white">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">
+                      Información necesaria
+                    </h6>
 
-  <img src="https://i.gifer.com/2xOS.gif" alt="Calma"  width="500" />
+                    <div id="divFirstName">
+                      <label for="inputFirstName">Nombre: *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="firstName"
+                        id="inputFirstName"
+                        placeholder="Ingresar nombre"
+                        required
+                      />
+                    </div>
 
-  <footer>
-    <div> 
-      <img class="sponsors" src="https://defensorsporting.com.uy/wp-content/uploads/2021/06/Sin-ttulo-1-1.png" alt="Sponsors">
+                    <div id="divLastName">
+                      <label for="inputLastName">Apellidos *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="lastName"
+                        id="inputLastName"
+                        placeholder="Ingresar apellidos"
+                        required
+                      />
+                    </div>
+
+                    <div id="divPhone">
+                      <label for="inputPhone">Teléfono *</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        name="phone"
+                        id="inputPhone"
+                        placeholder="Ingresar teléfono"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-8">
+                  <div class="card-block">
+                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">
+                      Información opcional
+                    </h6>
+
+                    <div class="row"></div>
+
+                    <div class="col-sm-12" id="divAge">
+                      <label for="inputAge">Edad</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        name="age"
+                        id="inputAge"
+                        placeholder="Ingresar edad"
+                        min="0"
+                      />
+                    </div>
+
+                    <div class="col-sm-12" id="divCountry">
+                      <label for="inputCountry">Nacionalidad</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="country"
+                        id="inputCountry"
+                        aria-describedby="countryHelp"
+                        placeholder="Ingresar país"
+                      />
+                    </div>
+
+                    <div class="col-sm-12" id="divEmail">
+                      <label for="inputEmail">E-mail</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="email"
+                        id="inputEmail"
+                        placeholder="Ingresar correo electrónico"
+                      />
+                    </div>
+                    <div class="col-sm-12">
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        id="buttonSave"
+                      >
+                        Guardar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
-    <div class="rounded-social-buttons">
-      <a class="social-button facebook" href="https://www.facebook.com/DefensorSp/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a class="social-button twitter" href="https://twitter.com/defensorsp" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a class="social-button youtube" href="https://www.youtube.com/defensorsp/" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a class="social-button instagram" href="https://www.instagram.com/defensorsp/" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
-    <div class="autor">
-      <p>
-        Este sitio fue desarrollado por <strong>Emiliano Esteves</strong>.
-      </p>
-    </div>
-  </footer>
 
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <footer>
+      <div>
+        <img
+          class="sponsors"
+          src="https://defensorsporting.com.uy/wp-content/uploads/2021/06/Sin-ttulo-1-1.png"
+          alt="Sponsors"
+        />
+      </div>
+      <div class="rounded-social-buttons">
+        <a
+          class="social-button facebook"
+          href="https://www.facebook.com/DefensorSp/"
+          target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          class="social-button twitter"
+          href="https://twitter.com/defensorsp"
+          target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          class="social-button youtube"
+          href="https://www.youtube.com/defensorsp/"
+          target="_blank"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          class="social-button instagram"
+          href="https://www.instagram.com/defensorsp/"
+          target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <div class="autor">
+        <p>
+          Este sitio fue desarrollado por <strong>Emiliano Esteves</strong>.
+        </p>
+      </div>
+    </footer>
 
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+      integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
-</body>
-
+    <script src="js/haceteSocio.js"></script>
+  </body>
 </html>
